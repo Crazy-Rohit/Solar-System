@@ -38,7 +38,7 @@ window.addEventListener('resize', () => {
 
 // Background Galaxy
 const loader = new THREE.TextureLoader();
-const bg = loader.load('./textures/milky_way_dark.jpg');
+const bg = loader.load('/textures/milky_way_dark.jpg');
 const bgMesh = new THREE.Mesh(
   new THREE.SphereGeometry(1000, 64, 64).scale(-1, 1, 1),
   new THREE.MeshBasicMaterial({ map: bg })
@@ -61,7 +61,7 @@ scene.add(stars);
 scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 
 // Audio
-const music = new Audio('./audio/space_theme.mp3');
+const music = new Audio('/audio/space_theme.mp3');
 music.loop = true;
 music.volume = 0.5;
 document.body.addEventListener('click', () => music.play().catch(() => {}), { once: true });
@@ -89,7 +89,7 @@ const planetData = [
 const orbitAngles = {}, speedControl = {}, planets = [];
 
 planetData.forEach(p => {
-  const tex = loader.load(`./textures/${p.file}`);
+  const tex = loader.load(`/textures/${p.file}`);
   const material = new THREE.MeshPhongMaterial({
     map: tex,
     emissive: p.name === "Sun" ? 0xfdb813 : 0x111111,
