@@ -1,0 +1,84 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+
+#solarSystemCanvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+button {
+  font-family: 'Orbitron';
+  font-size: 14px;
+  padding: 8px 12px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 100;
+}
+
+button:hover {
+  background: #555;
+}
+
+#resetCameraBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#pauseBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#muteBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#planet-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  width: 220px;
+  z-index: 100;
+  text-align: center;
+}
+
+#planet-controls input[type='range'] {
+  width: 100%;
+}
+
+#hover-label {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: 'Orbitron';
+  z-index: 200;
+  pointer-events: none;
+  display: none;
+  max-width: 200px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
