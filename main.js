@@ -117,7 +117,7 @@ planetData.forEach(p => {
 // Hover label
 let planetInfo = {};
 const tooltip = document.getElementById('hover-label');
-fetch('./planet-info.json').then(res => res.json()).then(data => planetInfo = data);
+fetch('/planet-info.json').then(res => res.json()).then(data => planetInfo = data);
 
 window.addEventListener('mousemove', e => {
   const mouse = new THREE.Vector2(
