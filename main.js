@@ -38,7 +38,7 @@ window.addEventListener('resize', () => {
 
 // Background Galaxy
 const loader = new THREE.TextureLoader();
-const bg = loader.load('/textures/milky_way_dark.jpg');
+const bg = loader.load('textures/stars_milkyway.jpg');
 const bgMesh = new THREE.Mesh(
   new THREE.SphereGeometry(1000, 64, 64).scale(-1, 1, 1),
   new THREE.MeshBasicMaterial({ map: bg })
