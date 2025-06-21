@@ -61,7 +61,7 @@ scene.add(stars);
 scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 
 // Audio
-const music = new Audio('/audio/space_theme.mp3');
+const music = new Audio('audio/space_theme.mp3');
 music.loop = true;
 music.volume = 0.5;
 document.body.addEventListener('click', () => music.play().catch(() => {}), { once: true });
@@ -75,15 +75,15 @@ document.getElementById('muteBtn').onclick = () => {
 
 // Planets
 const planetData = [
-  { name: "Sun", file: "sun.jpg", size: 6, distance: 0, speed: 0 },
-  { name: "Mercury", file: "mercury.jpg", size: 1.5, distance: 12, speed: 0.02 },
-  { name: "Venus", file: "venus.jpg", size: 2, distance: 16, speed: 0.015 },
-  { name: "Earth", file: "earth.jpg", size: 2.2, distance: 20, speed: 0.012 },
-  { name: "Mars", file: "mars.jpg", size: 1.8, distance: 25, speed: 0.01 },
-  { name: "Jupiter", file: "jupiter.jpg", size: 6, distance: 33, speed: 0.007 },
-  { name: "Saturn", file: "saturn.jpg", size: 4.5, distance: 42, speed: 0.005 },
-  { name: "Uranus", file: "uranus.jpg", size: 3.5, distance: 50, speed: 0.003 },
-  { name: "Neptune", file: "neptune.jpg", size: 3.5, distance: 56, speed: 0.002 }
+  { name: "Sun", file: "textures/sun.jpg", size: 6, distance: 0, speed: 0 },
+  { name: "Mercury", file: "textures/mercury.jpg", size: 1.5, distance: 12, speed: 0.02 },
+  { name: "Venus", file: "textures/venus.jpg", size: 2, distance: 16, speed: 0.015 },
+  { name: "Earth", file: "textures/earth.jpg", size: 2.2, distance: 20, speed: 0.012 },
+  { name: "Mars", file: "textures/mars.jpg", size: 1.8, distance: 25, speed: 0.01 },
+  { name: "Jupiter", file: "textures/jupiter.jpg", size: 6, distance: 33, speed: 0.007 },
+  { name: "Saturn", file: "textures/saturn.jpg", size: 4.5, distance: 42, speed: 0.005 },
+  { name: "Uranus", file: "textures/uranus.jpg", size: 3.5, distance: 50, speed: 0.003 },
+  { name: "Neptune", file: "textures/neptune.jpg", size: 3.5, distance: 56, speed: 0.002 }
 ];
 
 const orbitAngles = {}, speedControl = {}, planets = [];
